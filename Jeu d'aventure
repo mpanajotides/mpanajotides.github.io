@@ -19,10 +19,13 @@ image8 = pygame.image.load("chambre.jpg")
 image9 = pygame.image.load("salle-de-bain.jpg")
 image10 = pygame.image.load("toilette.jpg")
 image11 = pygame.image.load("garage.jpg")
+image12 = pygame.image.load("chaussures.jpg")
+image13 = pygame.image.load("courir.jpg")
 
-mapbas = pygame.image.load("map-bas.png")
-maphaut = pygame.image.load("map-haut.png")
-p = pygame.image.load("position.png")
+
+mapbas = pygame.image.load("map-bas.jpg")
+maphaut = pygame.image.load("map-haut.jpg")
+p = pygame.image.load("position.jpg")
 
 text1 = font.render("Vous vous trouvez dans le vestibule", True, (255, 255, 255))
 text2 = font.render("Vous vous trouvez dans le salon", True, (255, 255, 255))
@@ -35,11 +38,16 @@ text8 = font.render("Vous vous trouvez dans votre chambre", True, (255, 255, 255
 text9 = font.render("Vous vous trouvez dans la salle de bain", True, (255, 255, 255))
 text10 = font.render("Vous vous trouvez dans les toilettes", True, (255, 255, 255))
 text11 = font.render("Vous vous trouvez dans le garage", True, (255, 255, 255))
+text12 = font.render("Vous avez trouvé vos chaussures", True, (255, 255, 255))
+text13 = font.render("Vous courez !", True, (255, 255, 255))
 
 textfin = font.render("Vous avez Gagné ! Bien joué", True, (255, 255, 255))
 textmonter = font.render("M : Monter", True, (255, 255, 255))
 textdescendre = font.render("D : Descendre", True, (255, 255, 255))
 textcle = font.render("Bien joué ,Vous avez trouvé la clef du garage", True, (255, 255, 255))
+textprendre = font.render("P : Prendre les chaussures", True, (255, 255, 255))
+textpret = font.render("Vous êtes maintenant prêt pour aller courir", True, (255, 255, 255))
+textcourir = font.render("C : Aller courir", True, (255, 255, 255))
 
 dansQuellePierceEstLePersonnage = 1
 
@@ -47,7 +55,7 @@ def decrireLaPiece(piece):
     if piece == 1:
         fenetre.blit(image1, (0, 0))     # affiche l'image de la pièce
         fenetre.blit(text1, (0, 325))    # affiche le texte de la pièce
-        fenetre.blit(mapbas, (450, 0))   # affiche la mini map
+        fenetre.blit(mapbas, (450, 0))   # affiche la mini map du bas
         fenetre.blit(p, (520, 120))      #affiche la position du joueur
     elif piece == 2:
         fenetre.blit(image2, (0, 0))
@@ -74,7 +82,7 @@ def decrireLaPiece(piece):
         fenetre.blit(image6, (0, 0))
         fenetre.blit(text6, (0, 325))
         fenetre.blit(textdescendre, (0, 275)) # affiche le texte pour descendre (touche : d)
-        fenetre.blit(maphaut, (450, 0))
+        fenetre.blit(maphaut, (450, 0))       # affiche la mini map du haut
         fenetre.blit(p, (580, 10))
     elif piece == 7:
         fenetre.blit(image7, (0, 0))
@@ -94,16 +102,25 @@ def decrireLaPiece(piece):
     elif piece == 10:
         fenetre.blit(image10, (0, 0))
         fenetre.blit(text10, (0, 325))
-        fenetre.blit(textcle, (0, 50))   # affiche le texte "Vous avez trouvé la clef"
+        fenetre.blit(textcle, (0, 50))   # affiche le texte "Bien joué ,Vous avez trouvé la clef du garage"
         fenetre.blit(maphaut, (450, 0))
         fenetre.blit(p, (460, 65))
         clef=1
     elif piece == 11:
         fenetre.blit(image11, (0, 0))
         fenetre.blit(text11, (0, 325))
-        fenetre.blit(textfin, (0,280))
         fenetre.blit(mapbas, (450, 0))
         fenetre.blit(p, (460, 120))
+        fenetre.blit(textprendre, (0,300))   # affiche le texte "P : Prendre les chaussures"
+    elif piece == 12:
+        fenetre.blit(image12, (0, 0))
+        fenetre.blit(text12, (0, 250))
+        fenetre.blit(textpret, (0,280))      # affiche le texte "Vous êtes maintenant prêt pour aller courir"
+        fenetre.blit(textcourir, (0,320))    # affiche le texte "C : Aller courir"
+    elif piece == 13:
+        fenetre.blit(image13, (0, 0))
+        fenetre.blit(text13, (0, 260))
+        fenetre.blit(textfin, (0,290))      # affiche le texte "Vous avez Gagné ! Bien joué"
 
 cle=0
 passage=0
@@ -180,6 +197,16 @@ def decision(direction, piece):
     elif direction == 'd':
         if piece == 6:
             piece = 5
+
+    # P : le personnage désire prendre les chaussures
+    elif direction == 'p':
+        if piece == 11:
+            piece = 12
+
+    # P : le personnage désire aller courir
+    elif direction == 'c':
+        if piece == 12:
+            piece = 13
 
 
     if memorisePiece == piece:
