@@ -1,0 +1,238 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 oct. 2021, 15:52:42
+    Author     : mpanajotides
+*/
+h1.page1 {
+    color: black ; 
+    font-family: comic sans ms;
+    text-align: center ; 
+    font-size: 400%
+}
+p.titre {
+     color: darkblue ; 
+     text-align: center ; 
+     font-size: 275% ;  
+     font-family: comic sans ms
+}
+img.image1 {
+    position: relative ;
+    top: 10px; 
+    width: 50%;
+    padding-left: 475px;
+}
+nav.menu ul li.bouton{
+    list-style-type: none;
+    display : inline-block;
+}
+nav.menu ul li.bouton a{
+    color:  white;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px ; 
+    font-size: 200% ;  
+    font-family: comic sans ms
+}
+nav.menu ul li.bouton:hover a{
+    color: white;
+    background-color: darkgray;
+    transition: 0.3s all;
+}
+p.mail {
+    color: black ;
+    font-size: 125% ;  
+    font-family: times;
+    padding-left: 500px;
+}
+h1.page2 {
+    color: black ; 
+    font-family: comic sans ms;
+    text-align: center ; 
+    font-size: 400%
+}
+img.image2 {
+    width: 10%;
+}
+p.droite {
+    font-family: comic sans ms;
+    font-size: 150%;
+}
+img.image3 {
+    width: 15%;
+}
+p.droite2 {
+    font-family: comic sans ms;
+    font-size: 150%;
+}
+p.droite3 {
+    font-family: comic sans ms;
+    font-size: 150%;
+}
+img.image4 {
+    width: 12%;
+}
+img.image5 {
+    width: 12%;
+}
+img.image6 {
+    width: 6%;
+}
+p.droite4 {
+    font-family: comic sans ms;
+    font-size: 150%;
+}
+img.image7 {
+    width: 30%;
+}
+h1.video {
+    color: red ; 
+    font-family: comic sans ms;
+    font-size: 300%;
+}
+
+caption{
+    color: black ; 
+    font-family: comic sans ms;
+    text-align: center ; 
+    font-size: 300%
+}
+tr{
+    font-family: comic sans ms;
+    font-size: 200%;
+    text-align: center ;
+}
+h1.page4 {
+    color: black ; 
+    font-family: comic sans ms;
+    text-align: center ; 
+    font-size: 400%;
+}
+ul.joueurs{
+    font-family: comic sans ms;
+    font-size: 200%;
+}
+div.joueurs{
+    font-family: comic sans ms;
+    font-size: 300%;
+    text-align: center ;
+}
+img.joueurs1 {
+    position: relative ;
+    width: 25%;
+    padding-left: 225px;
+}
+img.joueurs2 {
+    position: relative ;
+    width: 25%;
+}
+p.joueurs1 {
+    font-family: comic sans ms;
+    font-size: 200%;
+    padding-left: 525px;
+}
+h1.page5 {
+    color: black ; 
+    font-family: comic sans ms;
+    text-align: center ; 
+    font-size: 400%
+}
+img.joueurs2 {
+    position: relative ;
+    width: 25%;
+}
+p.maillotA {
+    font-family: comic sans ms;
+    font-size: 250%;
+}
+p.prix1 {
+    color: red ;
+    font-family: comic sans ms;
+    font-size: 200%;
+}
+img.maillotA1 {
+    position: relative ;
+    width: 25%;
+}
+img.maillotA2 {
+    position: relative ;
+    width: 25%;
+}
+img.maillotA3 {
+    position: relative ;
+    width: 25%;
+}
+p.maillot {
+    font-family: comic sans ms;
+    font-size: 250%;
+}
+p.prix2 {
+    color: red ;
+    font-family: comic sans ms;
+    font-size: 200%;
+}
+img.maillot1 {
+    position: relative ;
+    width: 25%;
+}
+img.maillot2 {
+    position: relative ;
+    width: 25%;
+}
+img.maillot3 {
+    position: relative ;
+    width: 25%;
+}
+p.short {
+    font-family: comic sans ms;
+    font-size: 250%;
+}
+p.prix3 {
+    color: red ;
+    font-family: comic sans ms;
+    font-size: 200%;
+}
+img.short1 {
+    position: relative ;
+    width: 25%;
+}
+img.short2 {
+    position: relative ;
+    width: 25%;
+}
+img.short3 {
+    position: relative ;
+    width: 25%;
+}
+p.chaussettes {
+    font-family: comic sans ms;
+    font-size: 250%;
+}
+p.prix4 {
+    color: red ;
+    font-family: comic sans ms;
+    font-size: 200%;
+}
+img.chaussettes1 {
+    position: relative ;
+    width: 25%;
+}
+img.chaussettes2 {
+    position: relative ;
+    width: 25%;
+}
+img.chaussettes3 {
+    position: relative ;
+    width: 25%;
+}
+p.site {
+    font-family: comic sans ms;
+    font-size: 175%;
+}
+a.site {
+    font-family: comic sans ms;
+    font-size: 225%;
+}
